@@ -1,0 +1,202 @@
+.aboutGrid {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	gap: 48px;
+	align-items: start;
+}
+
+@media (max-width: 880px) {
+	.aboutGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.aboutAvatar {
+	position: relative;
+	aspect-ratio: 1;
+	border-radius: 24px;
+	background: var(--gradient);
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+	box-shadow: 0 30px 60px rgba(124, 92, 255, 0.35);
+}
+
+.aboutAvatar::before {
+	content: '';
+	position: absolute;
+	inset: 2px;
+	background: var(--bg-1);
+	border-radius: 22px;
+}
+
+.aboutAvatar .initials {
+	position: relative;
+	font-size: clamp(4rem, 10vw, 7rem);
+	font-weight: 800;
+	background: var(--gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	letter-spacing: -0.05em;
+}
+
+.aboutContent h3 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin-bottom: 12px;
+}
+
+.aboutContent .italic {
+	color: var(--text-dim);
+	font-style: italic;
+	line-height: 1.7;
+	margin-bottom: 24px;
+}
+
+.aboutContent p {
+	color: var(--text-dim);
+	line-height: 1.75;
+	margin-bottom: 16px;
+}
+
+.aboutInfo {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+	margin: 24px 0;
+	list-style: none;
+}
+
+@media (max-width: 560px) {
+	.aboutInfo {
+		grid-template-columns: 1fr;
+	}
+}
+
+.aboutInfo li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 14px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	font-size: 0.9rem;
+	color: var(--text-dim);
+}
+
+.aboutInfo li strong {
+	color: var(--text);
+	font-weight: 600;
+	margin-right: 4px;
+}
+
+.aboutInfo li svg {
+	color: var(--accent-2);
+	flex-shrink: 0;
+}
+
+.skillsGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 28px 48px;
+	max-width: 1100px;
+	margin: 60px auto 0;
+}
+
+@media (max-width: 720px) {
+	.skillsGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.skillRow .skillHead {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	font-size: 0.95rem;
+}
+
+.skillRow .skillHead .val {
+	color: var(--text-dim);
+	font-style: italic;
+}
+
+.skillBar {
+	height: 8px;
+	background: var(--surface);
+	border-radius: 999px;
+	overflow: hidden;
+	border: 1px solid var(--border);
+}
+
+.skillFill {
+	height: 100%;
+	background: var(--gradient);
+	border-radius: 999px;
+	box-shadow: 0 0 12px rgba(124, 92, 255, 0.6);
+}
+
+.testimonialsGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 24px;
+	margin-top: 60px;
+}
+
+.testimonialCard {
+	padding: 28px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 20px;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.testimonialCard:hover {
+	border-color: var(--border-strong);
+	transform: translateY(-4px);
+	background: var(--surface-2);
+}
+
+.testimonialCard .quote {
+	font-size: 2.2rem;
+	color: var(--accent);
+	line-height: 1;
+	margin-bottom: 8px;
+	opacity: 0.7;
+}
+
+.testimonialCard .text {
+	color: var(--text-dim);
+	line-height: 1.7;
+	font-size: 0.95rem;
+	margin-bottom: 20px;
+}
+
+.testimonialCard .author {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.testimonialCard .avatar {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: var(--gradient);
+	display: grid;
+	place-items: center;
+	font-weight: 700;
+	color: #fff;
+}
+
+.testimonialCard .name {
+	font-weight: 600;
+}
+
+.testimonialCard .role {
+	font-size: 0.82rem;
+	color: var(--text-muted);
+}

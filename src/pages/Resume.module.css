@@ -1,0 +1,93 @@
+.resumeGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 48px;
+}
+
+@media (max-width: 880px) {
+	.resumeGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.resumeTitle {
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-bottom: 24px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--border);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.resumeTitle svg {
+	color: var(--accent-2);
+}
+
+.resumeItem {
+	position: relative;
+	padding: 24px 24px 24px 32px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+}
+
+.resumeItem::before {
+	content: '';
+	position: absolute;
+	left: 16px;
+	top: 28px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: var(--gradient);
+	box-shadow: 0 0 12px var(--accent);
+}
+
+.resumeItem:hover {
+	border-color: var(--border-strong);
+	background: var(--surface-2);
+	transform: translateX(4px);
+}
+
+.resumeItem h4 {
+	font-size: 1.1rem;
+	margin-bottom: 4px;
+}
+
+.resumeItem .period {
+	display: inline-block;
+	font-size: 0.78rem;
+	color: var(--accent-2);
+	background: color-mix(in srgb, var(--accent-2) 15%, transparent);
+	padding: 3px 10px;
+	border-radius: 999px;
+	margin-bottom: 10px;
+}
+
+.resumeItem .org {
+	font-style: italic;
+	color: var(--text-dim);
+	font-size: 0.9rem;
+	margin-bottom: 12px;
+}
+
+.resumeItem ul {
+	padding-left: 18px;
+	color: var(--text-dim);
+	font-size: 0.92rem;
+	line-height: 1.7;
+}
+
+.resumeItem ul li {
+	margin-bottom: 6px;
+}
+
+.resumeItem p {
+	color: var(--text-dim);
+	line-height: 1.7;
+	font-size: 0.92rem;
+}

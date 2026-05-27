@@ -1,0 +1,7 @@
+.page {
+	flex: 1;
+	padding: 120px 6vw 80px;
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto;
+}

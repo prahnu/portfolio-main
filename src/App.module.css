@@ -1,0 +1,48 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.bgOrbs {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.bgOrbs::before,
+.bgOrbs::after {
+	content: '';
+	position: absolute;
+	width: 60vw;
+	height: 60vw;
+	border-radius: 50%;
+	filter: blur(120px);
+	opacity: 0.35;
+	animation: float 18s ease-in-out infinite;
+}
+
+.bgOrbs::before {
+	top: -20%;
+	left: -10%;
+	background: radial-gradient(circle, #7c5cff 0%, transparent 60%);
+}
+
+.bgOrbs::after {
+	bottom: -20%;
+	right: -10%;
+	background: radial-gradient(circle, #22d3ee 0%, transparent 60%);
+	animation-delay: -9s;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translate(0, 0) scale(1);
+	}
+	50% {
+		transform: translate(40px, -30px) scale(1.1);
+	}
+}

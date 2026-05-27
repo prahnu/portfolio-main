@@ -1,0 +1,132 @@
+.portfolioFilters {
+	display: flex;
+	gap: 8px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+
+.portfolioFilters button {
+	padding: 9px 20px;
+	border-radius: 999px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	color: var(--text-dim);
+	font-size: 0.88rem;
+	transition: all 0.25s ease;
+}
+
+.portfolioFilters button:hover {
+	color: var(--text);
+	border-color: var(--border-strong);
+}
+
+.portfolioFilters button.active {
+	background: var(--gradient);
+	color: #fff;
+	border-color: transparent;
+}
+
+.portfolioGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	gap: 24px;
+}
+
+.portfolioCard {
+	border-radius: 22px;
+	overflow: hidden;
+	position: relative;
+	aspect-ratio: 4 / 3;
+	cursor: pointer;
+	border: 1px solid var(--border);
+}
+
+.portfolioCard .thumb {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 3rem;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	transition: transform 0.5s ease;
+}
+
+.thumbImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	transition: transform 0.5s ease;
+}
+
+.portfolioCard .overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 24px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 45%, transparent 85%);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+
+.portfolioCard:hover .overlay {
+	opacity: 1;
+}
+
+.portfolioCard:hover .thumb {
+	transform: scale(1.08);
+}
+
+.portfolioCard:hover .thumbImage {
+	transform: scale(1.08);
+}
+
+.portfolioCard .cat {
+	font-size: 0.72rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent-2);
+	margin-bottom: 8px;
+	font-weight: 600;
+}
+
+.portfolioCard .title {
+	font-weight: 700;
+	font-size: 1.1rem;
+	margin-bottom: 6px;
+}
+
+.portfolioCard .desc {
+	font-size: 0.85rem;
+	color: var(--text-dim);
+	line-height: 1.5;
+}
+
+.portfolioCardLink {
+	position: absolute;
+	inset: 0;
+	display: block;
+	color: inherit;
+	text-decoration: none;
+}
+
+.portfolioCard .viewDetails {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin-top: 12px;
+	font-size: 0.82rem;
+	font-weight: 600;
+	color: #fff;
+	background: rgba(255, 255, 255, 0.14);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	padding: 6px 12px;
+	border-radius: 999px;
+	width: max-content;
+	backdrop-filter: blur(6px);
+}

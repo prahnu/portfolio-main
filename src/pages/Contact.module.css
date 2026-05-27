@@ -1,0 +1,150 @@
+.contactGrid {
+	display: grid;
+	grid-template-columns: 1fr 1.4fr;
+	gap: 32px;
+}
+
+@media (max-width: 880px) {
+	.contactGrid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.infoCard {
+	display: flex;
+	gap: 16px;
+	align-items: flex-start;
+	padding: 22px;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 18px;
+	margin-bottom: 16px;
+	transition: all 0.3s ease;
+}
+
+.infoCard:hover {
+	border-color: var(--border-strong);
+	transform: translateX(4px);
+}
+
+.infoCard .icon {
+	width: 46px;
+	height: 46px;
+	border-radius: 12px;
+	display: grid;
+	place-items: center;
+	background: var(--gradient);
+	color: #fff;
+	font-size: 1.15rem;
+	flex-shrink: 0;
+}
+
+.infoCard h3 {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--text-muted);
+	margin-bottom: 4px;
+}
+
+.infoCard p {
+	font-size: 1rem;
+	color: var(--text);
+}
+
+.contactForm {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 22px;
+	padding: 32px;
+}
+
+.formRow {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	margin-bottom: 16px;
+}
+
+@media (max-width: 560px) {
+	.formRow {
+		grid-template-columns: 1fr;
+	}
+}
+
+.formField {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-bottom: 16px;
+}
+
+.formField label {
+	font-size: 0.82rem;
+	color: var(--text-dim);
+	font-weight: 500;
+}
+
+.formField input,
+.formField textarea {
+	padding: 14px 16px;
+	background: var(--bg-1);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	color: var(--text);
+	font-size: 0.95rem;
+	transition: all 0.25s ease;
+	outline: none;
+}
+
+.formField input:focus,
+.formField textarea:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.2);
+}
+
+.formField textarea {
+	resize: vertical;
+	min-height: 140px;
+	font-family: inherit;
+}
+
+.formStatus {
+	margin-top: 18px;
+	font-size: 0.92rem;
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 10px 16px;
+	border-radius: 12px;
+	width: 100%;
+}
+
+.formStatusSuccess {
+	color: #10b981;
+	background: rgba(16, 185, 129, 0.1);
+	border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.formStatusError {
+	color: #f87171;
+	background: rgba(248, 113, 113, 0.1);
+	border: 1px solid rgba(248, 113, 113, 0.25);
+}
+
+.contactMap {
+	margin-top: 16px;
+	border-radius: 18px;
+	overflow: hidden;
+	border: 1px solid var(--border);
+	height: 240px;
+}
+
+.contactMap iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	filter: invert(0.92) hue-rotate(180deg) saturate(0.7);
+}
